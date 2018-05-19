@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'realm-android'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.dynam.loginexample01"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //anko-commons
+    implementation "org.jetbrains.anko:anko-commons:0.10.2"
+    //anko-commons-appcompat-v7용
+    implementation "org.jetbrains.anko:anko-appcompat-v7-commons:0.10.2"
+    //anko-comoons-support-v4용
+    implementation "org.jetbrains.anko:anko-support-v4-commons:0.10.2"
+    //anko-layouts(minSdk:15)
+    implementation "org.jetbrains.anko:anko-sdk15:0.10.2"
+    //anko-layouts-appcompat-v7용
+    implementation "org.jetbrains.anko:anko-appcompat-v7:0.10.2"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

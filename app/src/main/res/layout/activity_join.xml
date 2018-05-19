@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="100dp">
+
+    <EditText
+        android:id="@+id/txt_joinID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="아이디(5자 이상)"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txt_joinPW1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="패스워드(특수문자 포함 8자 이상)"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txt_joinPW2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="재입력"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txt_joinEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="이메일"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계정 등록" />
+</LinearLayout>
